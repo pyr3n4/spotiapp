@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 // Importar el módulo de rutas
 import { RouterModule } from '@angular/router';
 
+// Importar módulo para hacer peticiones http
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
@@ -23,6 +26,7 @@ import { ROUTES } from './app.routes';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot( ROUTES, {useHash: true} ) // Anyadir el arreglo de paths y habilitar el uso de Hash
   ],
   providers: [],
