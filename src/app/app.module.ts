@@ -15,6 +15,9 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 // Importar rutas (constante ROUTES, arreglo de paths)
 import { ROUTES } from './app.routes';
 
+// Servicios
+import { SpotifyService } from './services/spotify.service';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +32,7 @@ import { ROUTES } from './app.routes';
     HttpClientModule,
     RouterModule.forRoot( ROUTES, {useHash: true} ) // Anyadir el arreglo de paths y habilitar el uso de Hash
   ],
-  providers: [],
+  providers: [SpotifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
