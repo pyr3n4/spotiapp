@@ -20,7 +20,7 @@ export class SpotifyService {
 
     const headers = new HttpHeaders({
 
-      Authorization: 'Bearer BQCMwCY8PXYsGU8yPsRKghvHmwRsvZiAQCLe0H1Z-eY8z5HH6wIahy6E3e5qYoEHkVu_4LZBJl2G1Fbf7AQ'
+      Authorization: 'Bearer BQAM8MCdCb5K3oqa2G7MoazBwUtqQKR9q8H_CSjPnf8eFznqZ5XH9hmNXCrSV6VRFKkAHj31VEPcP_sZmu0'
     
     });
 
@@ -32,7 +32,7 @@ export class SpotifyService {
     
     // Devuelve un observable
     return this.getQuery('browse/new-releases?limit=10' )  // Opciones entre {}
-      .pipe( map( data => data['albums'].items) ); // Otra forma de buscar una propiedad, en lugar de indicar que data es de tipo 'any'
+       .pipe( map( data => data['albums'].items) ); // Otra forma de buscar una propiedad, en lugar de indicar que data es de tipo 'any'
     // .subscribe( data => { console.log( data ); } );
   }
 
@@ -40,6 +40,6 @@ export class SpotifyService {
     
 
     return this.getQuery(`search?q=${ termino }&type=artist&limit=10` )
-    .pipe( map( data =>  data['artists'].items ) );  // Simplificado eliminando 'return' y las {}
+       .pipe( map( data =>  data['artists'].items ) );  // Simplificado eliminando 'return' y las {}
   }
 }
