@@ -20,13 +20,17 @@ export class HomeComponent {
   //  }
 
   newReleases: any[] = [];
+  loading: Boolean;
 
   constructor( private spotify: SpotifyService) {
+
+    this.loading = true;
 
     this.spotify.getNewReleases()
     .subscribe( ( data: any) => { 
       console.log( data ); 
       this.newReleases = data;
+      this.loading = false;
     } );
   }
 

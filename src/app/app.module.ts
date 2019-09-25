@@ -12,6 +12,7 @@ import { SearchComponent } from './components/search/search.component';
 import { ArtistaComponent } from './components/artista/artista.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
 
 // Importar rutas (constante ROUTES, arreglo de paths)
 import { ROUTES } from './app.routes';
@@ -24,6 +25,7 @@ import { NoimagePipe } from './pipes/noimage.pipe';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +34,8 @@ import { NoimagePipe } from './pipes/noimage.pipe';
     ArtistaComponent,
     NavbarComponent,
     NoimagePipe,
-    TarjetaComponent
+    TarjetaComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
