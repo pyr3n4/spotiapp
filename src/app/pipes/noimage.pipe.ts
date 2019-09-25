@@ -13,9 +13,9 @@ export class NoimagePipe implements PipeTransform {
     }
   
     if ( images.length > 0){
-      //console.log(images[0].url);
+      console.log(images[0].url);
 
-      return 'images[0].url';
+      return images[0].url;
 
     } else {
 
