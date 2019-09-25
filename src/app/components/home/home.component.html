@@ -3,11 +3,10 @@
         {{ pais.name }} - {{ pais.population | number }}
     </li>
 </ul> -->
-
+<!-- 
 <div class="card-columns">
     <div *ngFor="let cancion of newReleases" class="card">
-        <!-- <img [src]="cancion.images[0].url" class="card-img-top" alt="..."> -->
-        <!-- Con pipe para filtrar imágenes -->
+        
         <img [src]="cancion.images | noimage" class="card-img-top" alt="...">
 
         <div class="card-body">
@@ -15,4 +14,6 @@
             <p class="card-text"><span *ngFor="let artista of cancion.artists" class="badge badge-pill badge-info">{{ artista.name }}</span></p>
         </div>
     </div>
-</div>
+</div> -->
+
+<app-tarjeta [items]="newReleases"></app-tarjeta>

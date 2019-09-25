@@ -11,14 +11,17 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { ArtistaComponent } from './components/artista/artista.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
 
 // Importar rutas (constante ROUTES, arreglo de paths)
 import { ROUTES } from './app.routes';
 
 // Servicios
 import { SpotifyService } from './services/spotify.service';
+
 // Pipes
 import { NoimagePipe } from './pipes/noimage.pipe';
+
 
 
 @NgModule({
@@ -28,7 +31,8 @@ import { NoimagePipe } from './pipes/noimage.pipe';
     SearchComponent,
     ArtistaComponent,
     NavbarComponent,
-    NoimagePipe
+    NoimagePipe,
+    TarjetaComponent
   ],
   imports: [
     BrowserModule,
