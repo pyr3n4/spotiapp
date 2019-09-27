@@ -20,7 +20,7 @@ export class HomeComponent {
   //  }
 
   newReleases: any[] = [];
-  loading: Boolean;
+  loading: boolean;
 
   constructor( private spotify: SpotifyService) {
 

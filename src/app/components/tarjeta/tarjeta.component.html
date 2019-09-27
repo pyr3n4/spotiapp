@@ -1,5 +1,5 @@
 <div class="card-columns m-5">
-    <div *ngFor="let item of items" class="card">
+    <div (click)="verArtista( item )" *ngFor="let item of items" class="card puntero">
         <!-- <img [src]="cancion.images[0].url" class="card-img-top" alt="..."> -->
         <!-- Con pipe para filtrar imágenes -->
         <img [src]="item.images | noimage" class="card-img-top" alt="...">
