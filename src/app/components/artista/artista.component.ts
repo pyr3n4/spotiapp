@@ -34,11 +34,14 @@ export class ArtistaComponent {
 
   }
 
-  getTopTracks( id: string){
+  getTopTracks( id: string ){
       this.spotify.getTopTracks( id )
-      .subscribe( (topTracks: any[]) => {
+      .subscribe( (topTracks: any) => {
           console.log( 'top tracks: ' , topTracks );
-          this.topTracks = topTracks;
+          this.topTracks = topTracks.tracks;
+          console.log( 'album: ', topTracks.tracks[0].album.name);
+          console.log( 'canción: ', topTracks.tracks[0].name);
+
         });
 
   }

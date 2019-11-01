@@ -13,4 +13,33 @@
     <div class="col-4 text-right">
         <button routerLink="/search" routerLinkActive="router-link-active" class="btn btn-outline-success">Regresar</button>
     </div>
+
+    <!-- Sección tabla para top-tracks -->
+
+    <div class="row m-5">
+
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Foto</th>
+                        <th>Album</th>
+                        <th>Canción</th>
+                        <th>Vista previa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let track of topTracks">
+                        <td></td>
+                        <td>{{ track.album.name }}</td>
+                        <td>{{ track.name }}</td>
+                        <td></td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
 </div>
