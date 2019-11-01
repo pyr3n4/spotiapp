@@ -18,4 +18,9 @@
 
 <app-loading *ngIf="loading" class="m-5"></app-loading>
 
+<div class="alert alert-danger animated fadeIn">
+    <h3>Error</h3>
+    <p> {{ textoError }} </p>
+</div>
+
 <app-tarjeta *ngIf="!loading" [items]="newReleases"></app-tarjeta>
